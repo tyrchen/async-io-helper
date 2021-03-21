@@ -1,0 +1,25 @@
+[package]
+name = "async-io-helper"
+version = "0.1.0"
+authors = ["Tyr Chen <tyr.chen@gmail.com>"]
+edition = "2018"
+license = "MIT"
+documentation = "https://docs.rs/async-io-helper"
+repository = "https://github.com/tyrchen/async-io-helper"
+homepage = "https://github.com/tyrchen/async-io-helper"
+description = """
+boxed async io for client/server.
+"""
+readme = "README.md"
+categories = ["development-tools"]
+keywords = ["tokio", "io"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1", features = ["net", "io-util"] }
+
+[dev-dependencies]
+tokio = { version = "1", features = ["rt-multi-thread", "net", "macros", "io-util"] }
+tracing = "0.1"
+tracing-subscriber = "0.2"
